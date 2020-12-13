@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './components/Navbar';
+//import Navbar from './components/Navbar';
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MainSection from './components/MainSection';
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div className="maindesign" >
         <Router>
-          <Navbar/>
+          {/* <Navbar/> */}
           <MainSection/>
         </Router>
       </div>

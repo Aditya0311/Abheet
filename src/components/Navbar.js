@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import './Navbar.css';
+import "./MainSection.css";
 import { Button } from './Button';
 function Navbar() {
 	const [click, setClick] = useState(false);
@@ -36,26 +37,46 @@ function Navbar() {
 					</div>
 					<ul className={click ? 'nav-menu active' : 'nav-menu'}>
 						<li className='nav-item'>
-							<Link to='#' className='nav-links' onClick={closeMobileMenu}>
-								ABOUT
+							<Link
+								activeClass="active"
+								to="about"
+								spy={true}
+								smooth={true}
+								offset={-70}
+								duration={500}
+								className='nav-links'
+								onClick={closeMobileMenu}>
+								About
 							</Link>
 						</li>
 						<li className='nav-item'>
 							<Link
-								to='#'
+								className="nav-item2"
+								activeClass="active"
+								to="work"
+								spy={true}
+								smooth={true}
+								offset={-70}
+								duration={500}
 								className='nav-links'
 								onClick={closeMobileMenu}
 							>
-								WORK
+								Work
 							</Link>
 						</li>
 						<li className='nav-item'>
 							<Link
-								to='#'
+								className="nav-item3"
+								activeClass="active"
+								to="contact"
+								spy={true}
+								smooth={true}
+								offset={-70}
+								duration={500}
 								className='nav-links'
 								onClick={closeMobileMenu}
 							>
-								CONTACT
+								Contact
 							</Link>
 						</li>
 
